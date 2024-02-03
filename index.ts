@@ -16,3 +16,47 @@ console.log(yes);
 let numberOne = 1;
 // numberOne = 'One';--error TS2322: Type 'string' is not assignable to type 'number'.
 
+const add = (a: number, b: number): number => {
+    console.log(a + b);
+    return a + b;
+}
+
+add(17, 34);
+
+const joinStrings = (s1: string, s2: string): string => {
+    console.log(s1 + s2);
+    return s1 + s2;
+}
+
+joinStrings("abc", "bca");
+
+const joinNumbers = (s1: number, s2: number): string => {
+    console.log(String(s1) + s2);
+    return String(s1) + s2;
+}
+
+joinNumbers(12, 123);
+
+//introduction on interface
+
+interface Post {
+
+    title: string,
+    dateOf: string
+    published: boolean
+
+}
+
+const post: Post = {
+    title: 'test result',
+    dateOf: '12-05-2023',
+    published: true
+}
+
+const printPost = (postToBePrinted: Post) => {
+    return `${postToBePrinted.title}`
+}
+
+console.log(printPost(post));
+
+
